@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManagement : MonoBehaviour
 {
     public GameObject Setting;
     public GameObject quitButton;
-    private bool ismenuon = false;
 
     public void OnclickButton()
     {
@@ -32,12 +32,10 @@ public class GameManagement : MonoBehaviour
             if (Setting.activeSelf)
             {
                 Setting.SetActive(false);
-                ismenuon = false;
             }
             else
             {
                 Setting.SetActive(true);
-                ismenuon = true;
             }
         }
 
@@ -49,5 +47,10 @@ public class GameManagement : MonoBehaviour
         {
             Time.timeScale = 1f;
         }
+    }
+
+    public void GoMainView()
+    {
+        SceneManager.LoadScene("StartScene");
     }
 }
