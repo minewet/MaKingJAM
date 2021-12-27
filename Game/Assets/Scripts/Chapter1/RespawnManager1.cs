@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// 부활할 때 알맞은 지점에서 부활하도록 하는 스크립트입니다.
-// 복사해서 각 스테이지 번호 붙여서 사용하세요!
-public class RespawnManager : MonoBehaviour
+public class RespawnManager1 : MonoBehaviour
 {
     private string respawnMemory;
 
@@ -41,5 +39,4 @@ public class RespawnManager : MonoBehaviour
             player.transform.position = respawnSpots[3].transform.position;
         }
     }
-
 }
