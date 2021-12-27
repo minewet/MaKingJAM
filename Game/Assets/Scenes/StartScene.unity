@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Setting: {fileID: 2130248718}
+  quitButton: {fileID: 0}
 --- !u!4 &218236280
 Transform:
   m_ObjectHideFlags: 0
@@ -458,7 +459,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uACE0\uC591\uC774 \uAC8C\uC784(\uAC00\uC81C)"
+  m_Text: "\uB0E5\uACFC \uD568\uAED8"
 --- !u!222 &464981797
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1829,7 +1830,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1744440099
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2153,7 +2154,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2130248719
 MonoBehaviour:
   m_ObjectHideFlags: 0
