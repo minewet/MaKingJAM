@@ -28,21 +28,33 @@ public class SelectMemory1 : MonoBehaviour
         {
             PlayerPrefs.SetString("memory1", "memory1-1");
             respawnManager.SetRespawnMemory("memory1-1");
+            Management.A = 1;
+            Debug.Log(Management.A);
+            Debug.Log("memory1-1");
         }
         else if (gameObject.name == "memory1-2")
         {
             PlayerPrefs.SetString("memory1", "memory1-2");
             respawnManager.SetRespawnMemory("memory1-2");
+            Management.A = 2;
+            Debug.Log(Management.A);
+            Debug.Log("memory1-2");
         }
         else if (gameObject.name == "memory16-1")
         {
             PlayerPrefs.SetString("memory2", "memory16-1");
             respawnManager.SetRespawnMemory("memory16-1");
+            Management.B = 1;
+            Debug.Log(Management.B);
+            Debug.Log("memory2-1");
         }
         else if (gameObject.name == "memory16-2")
         {
             PlayerPrefs.SetString("memory2", "memory16-2");
             respawnManager.SetRespawnMemory("memory16-2");
+            Management.B = 2;
+            Debug.Log(Management.B);
+            Debug.Log("memory2-2");
         }
         else if (gameObject.name == "item6")
         {
@@ -54,3 +66,4 @@ public class SelectMemory1 : MonoBehaviour
         }
     }
 }
+
