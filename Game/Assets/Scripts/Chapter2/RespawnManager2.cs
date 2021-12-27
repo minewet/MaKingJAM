@@ -36,13 +36,17 @@ public class RespawnManager2 : MonoBehaviour
         {
             player.transform.position = respawnSpots[2].transform.position;
         }
-        else if (respawnMemory == "memory2-1")
+        else if (respawnMemory == "item13")
         {
             player.transform.position = respawnSpots[3].transform.position;
         }
-        else if (respawnMemory == "memory2-2")
+        else if (respawnMemory == "memory2-1")
         {
             player.transform.position = respawnSpots[4].transform.position;
+        }
+        else if (respawnMemory == "memory2-2")
+        {
+            player.transform.position = respawnSpots[5].transform.position;
         }
     }
 
