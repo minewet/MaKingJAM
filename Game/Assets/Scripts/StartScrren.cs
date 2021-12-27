@@ -43,12 +43,12 @@ public class StartScrren : MonoBehaviour
             if (staffname != "" && Input.GetKeyDown(KeyCode.Return))
             {
                 s2 = true;
-                s2_asset.SetActive(false);
             }
         }
 
         if (s2 == true)
         {
+            s2_asset.SetActive(false);
             s3_asset.SetActive(true);
             question.text = "고양이의 이름은 무엇인가요?";
             catname = names_cat.text;
