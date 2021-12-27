@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
     private Rigidbody2D player;
-    public float speed = 100f;
-    public float jump = 300f;
+    public float speed = 300f;
+    public float jump = 700f;
     private bool isJumping = false;
 
     SpriteRenderer spriteRenderer;
