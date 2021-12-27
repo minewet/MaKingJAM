@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class MoveCamera : MonoBehaviour
 {
+    [SerializeField]
+    private float x;
+
+    [SerializeField]
+    private float y;
+
     private Transform cam;
     private Vector3 lower;
     private Vector3 higher;
@@ -12,8 +18,8 @@ public class MoveCamera : MonoBehaviour
     void Start()
     {
         cam = gameObject.transform.GetChild(0);
-        lower = new Vector3(4f, 2.5f, -10f);
-        higher = new Vector3(4f, 0f, -10f);
+        lower = new Vector3(x, y, -10f);
+        higher = new Vector3(x, 0f, -10f);
     }
 
     // Update is called once per frame
