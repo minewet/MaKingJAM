@@ -30,11 +30,13 @@ public class SelectMemory2 : MonoBehaviour
         {
             PlayerPrefs.SetString("memory1", "memory1-1");
             respawnManager.SetRespawnMemory("memory1-1");
+            Management.C = 1;
         }
         else if (gameObject.name == "memory1-2")
         {
             PlayerPrefs.SetString("memory1", "memory1-2");
             respawnManager.SetRespawnMemory("memory1-2");
+            Management.C = 2;
         }
         else if (gameObject.name == "item13")
         {
@@ -44,11 +46,13 @@ public class SelectMemory2 : MonoBehaviour
         {
             PlayerPrefs.SetString("memory2", "memory2-1");
             respawnManager.SetRespawnMemory("memory2-1");
+            Management.D = 1;
         }
         else if (gameObject.name == "memory2-2")
         {
             PlayerPrefs.SetString("memory2", "memory2-2");
             respawnManager.SetRespawnMemory("memory2-2");
+            Management.D = 2;
         }
     }
 }

@@ -27741,6 +27741,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2145780996}
   - component: {fileID: 2145780995}
+  - component: {fileID: 2145780997}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -27776,3 +27777,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2145780997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145780994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be463ace0d8ef80428000c9370e544ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  route1: {fileID: 1180245545}
+  route2: {fileID: 28093373}
+  route3: {fileID: 621568854}
+  route4: {fileID: 1766660645}
+  item1: {fileID: 1856414799}
+  item2: {fileID: 867880865}
+  item3: {fileID: 242017380}
+  item4: {fileID: 425113499}
