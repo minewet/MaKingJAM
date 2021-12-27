@@ -34,26 +34,26 @@ public class RespawnManager1 : MonoBehaviour
         else if (respawnMemory == "memory1-1")
         {
             player.transform.position = respawnSpots[1].transform.position;
-  
-            Debug.Log("1-1");
         }
         else if (respawnMemory == "memory1-2")
         {
             player.transform.position = respawnSpots[2].transform.position;
-   
-            Debug.Log("1-2");
+        }
+        else if (respawnMemory == "item6")
+        {
+            player.transform.position = respawnSpots[3].transform.position;
+        }
+        else if (respawnMemory == "item21")
+        {
+            player.transform.position = respawnSpots[4].transform.position;
         }
         else if (respawnMemory == "memory16-1")
         {
-            player.transform.position = respawnSpots[3].transform.position;
-
-            Debug.Log("2-1");
+            player.transform.position = respawnSpots[5].transform.position;
         }
         else if (respawnMemory == "memory16-2")
         {
-            player.transform.position = respawnSpots[4].transform.position;
-
-            Debug.Log("2-2");
+            player.transform.position = respawnSpots[6].transform.position;
         }
     }
 }
