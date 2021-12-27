@@ -28,7 +28,7 @@ public class PlayerControl : MonoBehaviour
 
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
-            if(player.velocity.y == 0)
+            if(player.velocity.y == 0 && isJumping == false)
 			{
                 player.AddForce(new Vector2(0, jump), ForceMode2D.Force);
                 isJumping = true;
@@ -43,21 +43,14 @@ public class PlayerControl : MonoBehaviour
             anim.SetBool("isPlayerWalking", false);
         else
             anim.SetBool("isPlayerWalking", true);
-
-        if (player.velocity.y < 0)
-        {
-            //Debug.DrawRay(player.position, Vector3.down, new Color(0, 1, 0));
-            RaycastHit2D rayHit = Physics2D.Raycast(player.position, Vector3.down, 1, LayerMask.GetMask("Platform"));
-            
-            if (rayHit.collider != null)
-            {
-                if (rayHit.distance < 0.6f)
-                {
-                    anim.SetBool("isPlayerJumping", false);
-                    //Debug.Log(rayHit.collider.name);
-                }
-            }
-        }
     }
 
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Platform"))
+        {
+            isJumping = false;
+            anim.SetBool("isPlayerJumping", false);
+        }
+    }
 }
