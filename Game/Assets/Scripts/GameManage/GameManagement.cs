@@ -7,6 +7,7 @@ public class GameManagement : MonoBehaviour
 {
     public GameObject Setting;
     public GameObject quitButton;
+    private bool ismenuon = false;
 
     public void OnclickButton()
     {
@@ -31,17 +32,22 @@ public class GameManagement : MonoBehaviour
             if (Setting.activeSelf)
             {
                 Setting.SetActive(false);
+                ismenuon = false;
             }
             else
             {
                 Setting.SetActive(true);
+                ismenuon = true;
             }
-
         }
-        if (Setting.activeSelf)
+
+        if (ismenuon)
         {
             Time.timeScale = 0.0F;
-            Time.fixedDeltaTime = 0.0F * Time.timeScale;
+        }
+        else if (!ismenuon)
+        {
+            Time.timeScale = 1f;
         }
     }
 }
