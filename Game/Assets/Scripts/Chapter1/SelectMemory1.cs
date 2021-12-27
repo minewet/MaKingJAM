@@ -2,23 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// 선택한 선택지를 변수에 저장하는 스크립트입니다.
-public class SelectMemory : MonoBehaviour
+public class SelectMemory1 : MonoBehaviour
 {
-    // RespawnManager를 각 폴더에 새로 만든 스크립트 이름으로 바꾸어주세요. 예를들면 RespawnManager1 이런식 입니다.
     [SerializeField]
-    private RespawnManager respawnManager;
+    private RespawnManager1 respawnManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     // PlayerPrefs 첫번째 parameter에는 memory + 선택지 숫자(몇 번째 선택지인지)
@@ -26,7 +24,7 @@ public class SelectMemory : MonoBehaviour
     // 해당 챕터의 선택지 수 만큼 else if문을 복사해서 쓰시면 됩니다.
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(gameObject.name == "memory1-1")
+        if (gameObject.name == "memory1-1")
         {
             PlayerPrefs.SetString("memory1", "memory1-1");
             respawnManager.SetRespawnMemory("memory1-1");

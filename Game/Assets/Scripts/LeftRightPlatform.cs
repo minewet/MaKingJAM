@@ -25,9 +25,9 @@ public class LeftRightPlatform : MonoBehaviour
     void Update()
     {
         if (gameObject.transform.position.x < left.position.x)
-            direction *= -1;
+            direction = 1f;
         else if (gameObject.transform.position.x > right.position.x)
-            direction *= -1;
+            direction = -1f;
 
         gameObject.transform.position = new Vector3(gameObject.transform.position.x + Time.deltaTime * speed * direction, gameObject.transform.position.y, gameObject.transform.position.z);
     }

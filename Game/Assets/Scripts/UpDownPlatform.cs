@@ -25,9 +25,9 @@ public class UpDownPlatform : MonoBehaviour
     void Update()
     {
         if (gameObject.transform.position.y < down.position.y)
-            direction *= -1;
+            direction = 1f;
         else if (gameObject.transform.position.y > up.position.y)
-            direction *= -1;
+            direction = -1f;
 
         gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + Time.deltaTime * speed * direction, gameObject.transform.position.z);
     }
