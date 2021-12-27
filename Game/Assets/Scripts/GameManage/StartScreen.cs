@@ -10,6 +10,7 @@ public class StartScreen : MonoBehaviour
     [SerializeField] GameObject s2_asset;
     [SerializeField] GameObject s3_asset;
     [SerializeField] GameObject s4_asset;
+    [SerializeField] GameObject Setting_popup;
     private bool s1 = false;
     private bool s2 = false;
     private bool s3 = false;
@@ -18,12 +19,15 @@ public class StartScreen : MonoBehaviour
     [SerializeField] Text question;
     [SerializeField] InputField names_staff;
     [SerializeField] InputField names_cat;
+    [SerializeField] GameObject QuitButton;
+    [SerializeField] GameObject SettingsButton;
     public string staffname = "";
     public string catname = "";
 
     // Start is called before the first frame update
     void Start()
     {
+        Setting_popup.SetActive(false);
         s4_asset.SetActive(false);
         textObject.SetActive(false);
         s3_asset.SetActive(false);
@@ -76,6 +80,23 @@ public class StartScreen : MonoBehaviour
     public void ClickHere()
     {
         SceneManager.LoadScene("Chapter1");
+    }
+
+    public void QuitButtonDown()
+    {
+        Debug.Log("Quit Button Down");
+        Application.Quit();
+    }
+
+    public void SettingButtonDown()
+    {
+        Debug.Log("Settings Button Down");
+        Setting_popup.SetActive(true);
+    }
+
+    public void SettingBackButtonDown()
+    {
+        Setting_popup.SetActive(false);
     }
 
 }
