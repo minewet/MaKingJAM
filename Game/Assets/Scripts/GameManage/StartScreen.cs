@@ -44,6 +44,7 @@ public class StartScreen : MonoBehaviour
             s2_asset.SetActive(true);
             question.text = "집사의 이름은 무엇인가요?";
             staffname = names_staff.text;
+            PlayerPrefs.SetString("staffName", names_staff.text);
             if (staffname != "" && Input.GetKeyDown(KeyCode.Return))
             {
                 s2 = true;
@@ -56,6 +57,7 @@ public class StartScreen : MonoBehaviour
             s3_asset.SetActive(true);
             question.text = "고양이의 이름은 무엇인가요?";
             catname = names_cat.text;
+            PlayerPrefs.SetString("catName", names_cat.text);
             if (catname != "" && Input.GetKeyDown(KeyCode.Return))
             {
                 s3 = true;
