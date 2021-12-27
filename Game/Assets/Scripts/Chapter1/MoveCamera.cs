@@ -19,7 +19,7 @@ public class MoveCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(gameObject.transform.position.y > -0.5)
+        if(gameObject.transform.position.y > -0.5 || gameObject.transform.position.y < -4)
         {
                 cam.localPosition = Vector3.Lerp(cam.localPosition, higher, Time.deltaTime);
         }

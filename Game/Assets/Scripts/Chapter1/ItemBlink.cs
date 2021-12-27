@@ -16,6 +16,7 @@ public class ItemBlink : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if(gameObject.GetComponent<SpriteRenderer>().color.a >= 1f)
         {
             direction = -1f;
@@ -25,6 +26,7 @@ public class ItemBlink : MonoBehaviour
             direction = 1f;
         }
         gameObject.GetComponent<SpriteRenderer>().color = new Color(color.r, color.g, color.b, gameObject.GetComponent<SpriteRenderer>().color.a + Time.deltaTime * direction);
+        */
     }
 
 }

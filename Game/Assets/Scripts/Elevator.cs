@@ -28,8 +28,6 @@ public class Elevator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(direction);
-
         if ((gameObject.transform.position.y < down.position.y || gameObject.transform.position.y > up.position.y) && count == 0)
         {
             StartCoroutine(Timer());
