@@ -38,5 +38,10 @@ public class GameManagement : MonoBehaviour
             }
 
         }
+        if (Setting.activeSelf)
+        {
+            Time.timeScale = 0.0F;
+            Time.fixedDeltaTime = 0.0F * Time.timeScale;
+        }
     }
 }
