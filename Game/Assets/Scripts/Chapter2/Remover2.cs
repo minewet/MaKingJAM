@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Remover1 : MonoBehaviour
+public class Remover2 : MonoBehaviour
 {
 
     [SerializeField] GameObject route1; // 분기 1
@@ -24,25 +24,26 @@ public class Remover1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Management.A == 1)
+        if (Management.C == 1)
         {
             route2.SetActive(false);
             item2.SetActive(false);
         }
-        if (Management.A == 2)
+        if (Management.C == 2)
         {
             route1.SetActive(false);
             item1.SetActive(false);
         }
-        if (Management.B == 1)
+        if (Management.D == 1)
         {
             route4.SetActive(false);
             item4.SetActive(false);
         }
-        if (Management.B == 2)
+        if (Management.D == 2)
         {
             route3.SetActive(false);
             item3.SetActive(false);
         }
     }
 }
+
