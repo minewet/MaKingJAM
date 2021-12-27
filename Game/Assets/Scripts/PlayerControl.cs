@@ -9,10 +9,15 @@ public class PlayerControl : MonoBehaviour
     public float jump = 300f;
     private bool isJumping = false;
 
+    SpriteRenderer spriteRenderer;
+    Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
         player = gameObject.GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -27,7 +32,36 @@ public class PlayerControl : MonoBehaviour
 			{
                 player.AddForce(new Vector2(0, jump), ForceMode2D.Force);
                 isJumping = true;
+                anim.SetBool("isPlayerJumping", true);
             }
-        }     
+        }
+        else
+        {
+            //anim.SetBool("isPlayerJumping", false);
+        }
+
+        if (Input.GetButton("Horizontal")) 
+            spriteRenderer.flipX = Input.GetAxisRaw("Horizontal") == -1; //flip
+
+        if (player.velocity.normalized.x == 0)
+            anim.SetBool("isPlayerWalking", false);
+        else
+            anim.SetBool("isPlayerWalking", true);
+    }
+
+    void FixedUpdate()
+    {
+        if(player.velocity.y < 0)
+        {
+            Debug.DrawRay(player.position, Vector3.down, new Color(0, 1, 0));
+            RaycastHit2D rayHit = Physics2D.Raycast(player.position, Vector3.down, 1, LayerMask.GetMask("Platform"));
+            if (rayHit.collider != null)
+            {
+                if (rayHit.distance < 0.1f) { 
+                    anim.SetBool("isPlayerJumping", false);
+                    Debug.Log(rayHit.collider.name);
+                    }
+            }
+        }
     }
 }
