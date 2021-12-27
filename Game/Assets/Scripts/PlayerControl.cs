@@ -35,10 +35,6 @@ public class PlayerControl : MonoBehaviour
                 anim.SetBool("isPlayerJumping", true);
             }
         }
-        else
-        {
-            //anim.SetBool("isPlayerJumping", false);
-        }
 
         if (Input.GetButton("Horizontal")) 
             spriteRenderer.flipX = Input.GetAxisRaw("Horizontal") == -1; //flip
