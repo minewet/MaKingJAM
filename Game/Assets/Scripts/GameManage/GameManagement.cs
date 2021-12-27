@@ -41,11 +41,11 @@ public class GameManagement : MonoBehaviour
             }
         }
 
-        if (ismenuon)
+        if (Setting.activeSelf)
         {
             Time.timeScale = 0.0F;
         }
-        else if (!ismenuon)
+        else if (!Setting.activeSelf)
         {
             Time.timeScale = 1f;
         }
