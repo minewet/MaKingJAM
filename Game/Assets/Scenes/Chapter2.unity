@@ -1151,7 +1151,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1128556201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1159,12 +1159,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1128556200}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 912d434c3efd7af4a9eb3bb01f3d87e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 0.1
 --- !u!64 &1128556202
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1197,7 +1197,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 321c1dc0a70f62d49bdf9bacb412108d, type: 2}
+  - {fileID: 2100000, guid: 95ff82e2c800bbf4aa14fbf67461c046, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
