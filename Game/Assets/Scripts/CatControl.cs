@@ -28,7 +28,7 @@ public class CatControl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (player.velocity.y == 0)
+            if (player.velocity.y == 0 && isJumping == false)
             {
                 player.AddForce(new Vector2(0, jump), ForceMode2D.Force);
                 isJumping = true;
@@ -43,20 +43,14 @@ public class CatControl : MonoBehaviour
             anim.SetBool("isCatWalking", false);
         else
             anim.SetBool("isCatWalking", true);
+    }
 
-        if (player.velocity.y < 0)
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Platform"))
         {
-            //Debug.DrawRay(player.position, Vector3.down, new Color(0, 1, 0));
-            RaycastHit2D rayHit = Physics2D.Raycast(player.position, Vector3.down, 1, LayerMask.GetMask("Platform"));
-
-            if (rayHit.collider != null)
-            {
-                if (rayHit.distance < 0.6f)
-                {
-                    anim.SetBool("isCatJumping", false);
-                    //Debug.Log(rayHit.collider.name);
-                }
-            }
+            isJumping = false;
+            anim.SetBool("isCatJumping", false);
         }
     }
 
