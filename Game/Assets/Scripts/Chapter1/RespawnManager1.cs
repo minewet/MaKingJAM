@@ -14,6 +14,11 @@ public class RespawnManager1 : MonoBehaviour
     [SerializeField]
     private GameObject[] respawnSpots;
 
+    private void Start()
+    {
+        respawnMemory = "scene1";       
+    }
+
     public void SetRespawnMemory(string name)
     {
         respawnMemory = name;

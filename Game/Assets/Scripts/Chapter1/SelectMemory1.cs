@@ -39,5 +39,10 @@ public class SelectMemory1 : MonoBehaviour
             PlayerPrefs.SetString("memory2", "memory2-1");
             respawnManager.SetRespawnMemory("memory2-1");
         }
+        else if (gameObject.name == "memory2-2")
+        {
+            PlayerPrefs.SetString("memory2", "memory2-2");
+            respawnManager.SetRespawnMemory("memory2-2");
+        }
     }
 }
