@@ -47,21 +47,21 @@ public class PlayerControl : MonoBehaviour
             anim.SetBool("isPlayerWalking", false);
         else
             anim.SetBool("isPlayerWalking", true);
-    }
 
-    void FixedUpdate()
-    {
-        if(player.velocity.y < 0)
+        if (player.velocity.y < 0)
         {
-            Debug.DrawRay(player.position, Vector3.down, new Color(0, 1, 0));
+            //Debug.DrawRay(player.position, Vector3.down, new Color(0, 1, 0));
             RaycastHit2D rayHit = Physics2D.Raycast(player.position, Vector3.down, 1, LayerMask.GetMask("Platform"));
+            
             if (rayHit.collider != null)
             {
-                if (rayHit.distance < 0.1f) { 
+                if (rayHit.distance < 0.6f)
+                {
                     anim.SetBool("isPlayerJumping", false);
-                    Debug.Log(rayHit.collider.name);
-                    }
+                    //Debug.Log(rayHit.collider.name);
+                }
             }
         }
     }
+
 }
