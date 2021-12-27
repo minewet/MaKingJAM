@@ -31,4 +31,14 @@ public class LeftRightPlatform : MonoBehaviour
 
         gameObject.transform.position = new Vector3(gameObject.transform.position.x + Time.deltaTime * speed * direction, gameObject.transform.position.y, gameObject.transform.position.z);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        collision.transform.SetParent(gameObject.transform);
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        collision.transform.SetParent(null);
+    }
 }

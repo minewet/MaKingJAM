@@ -31,4 +31,14 @@ public class UpDownPlatform : MonoBehaviour
 
         gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + Time.deltaTime * speed * direction, gameObject.transform.position.z);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        collision.transform.SetParent(gameObject.transform);
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        collision.transform.SetParent(null);
+    }
 }
