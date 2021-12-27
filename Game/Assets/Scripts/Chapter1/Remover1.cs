@@ -10,6 +10,11 @@ public class Remover1 : MonoBehaviour
     [SerializeField] GameObject route3; // 분기 2
     [SerializeField] GameObject route4;
 
+    [SerializeField] GameObject item1; // 분기 1
+    [SerializeField] GameObject item2;
+    [SerializeField] GameObject item3; // 분기 2
+    [SerializeField] GameObject item4;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,18 +27,22 @@ public class Remover1 : MonoBehaviour
         if (Management.A == 1)
         {
             route2.SetActive(false);
+            item2.SetActive(false);
         }
         if (Management.A == 2)
         {
             route1.SetActive(false);
+            item1.SetActive(false);
         }
         if (Management.B == 1)
         {
             route4.SetActive(false);
+            item4.SetActive(false);
         }
         if (Management.B == 2)
         {
             route3.SetActive(false);
+            item3.SetActive(false);
         }
     }
 }
