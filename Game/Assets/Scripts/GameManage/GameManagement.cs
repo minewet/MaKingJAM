@@ -11,6 +11,7 @@ public class GameManagement : MonoBehaviour
 
     public void OnclickButton()
     {
+        Debug.Log("Quit Button clicked");
         if(PlayerPrefs.GetFloat("oncePlayed") > 0.0f)
         {
             PlayerPrefs.SetFloat("OncePlayed", 0.0f);

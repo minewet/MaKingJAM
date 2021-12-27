@@ -18,6 +18,7 @@ public class StartScreen : MonoBehaviour
     [SerializeField] Text question;
     [SerializeField] InputField names_staff;
     [SerializeField] InputField names_cat;
+    [SerializeField] GameObject QuitButton;
     public string staffname = "";
     public string catname = "";
 
@@ -76,6 +77,12 @@ public class StartScreen : MonoBehaviour
     public void ClickHere()
     {
         SceneManager.LoadScene("Chapter1");
+    }
+
+    public void QuitButtonDown()
+    {
+        Debug.Log("Quit Button Down");
+        Application.Quit();
     }
 
 }
