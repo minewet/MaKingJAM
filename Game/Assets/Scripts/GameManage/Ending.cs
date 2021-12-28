@@ -17,6 +17,7 @@ public class Ending : MonoBehaviour
 
     [SerializeField] GameObject ending;
     [SerializeField] GameObject menu;
+    [SerializeField] AudioSource buttonClicked;
 
     // Start is called before the first frame update
     void Start()
@@ -87,12 +88,14 @@ public class Ending : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             ending.SetActive(false);
+            buttonClicked.Play();
             menu.SetActive(true);
         }
     }
 
     public void HomeButton()
     {
+        buttonClicked.Play();
         SceneManager.LoadScene("StartScene");
         Management.A = 0;
         Management.B = 0;
@@ -106,6 +109,7 @@ public class Ending : MonoBehaviour
 
     public void QuitButton()
     {
+        buttonClicked.Play();
         Application.Quit();
     }
 }
