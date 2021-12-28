@@ -27809,7 +27809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d344922baa8e9f34c86e0f1284f68d2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene2: memory2-1
+  scene2: scene2
   respawnManager: {fileID: 1809456938}
 --- !u!114 &1486642816
 MonoBehaviour:
