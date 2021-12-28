@@ -55,7 +55,7 @@ public class SelectMemory2 : MonoBehaviour
             respawnManager.SetRespawnMemory("memory2-2");
             Management.D = 2;
         }
-        else if (gameObject.name == "item29") // 스테이지 끝에 있는 아이템
+        else if (gameObject.name == "item30") // 스테이지 끝에 있는 아이템
         {
             Management.staff = 2; // 0 대신 스테이지 번호
             if (Management.staff == 3)
