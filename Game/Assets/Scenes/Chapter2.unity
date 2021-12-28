@@ -10596,7 +10596,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &605145485
 Transform:
   m_ObjectHideFlags: 0
@@ -12206,7 +12206,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &691451610
 Transform:
   m_ObjectHideFlags: 0
@@ -12229,7 +12229,9 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 691451609}
-  m_Text: "\uC57C\uC639\uD558\uACE0 \uC6B0\uB294\uB370\n\uB108\uBB34 \uC0AC\uB791\uC2A4\uB7EC\uC6E0\uC5B4"
+  m_Text: "\uB098\uB294 \uD798\uC774 \uB418\uC5B4\uC8FC\uACE0 \uC2F6\uC5C8\uACE0
+    \n\uB610 \uB098\uB97C \uBCF4\uBA74\uC11C \uD65C\uAE30\uB97C \uB418\uCC3E\uAE30\uB97C
+    \uBC14\uB77C\uB294 \uB9C8\uC74C\uC5D0\uC11C  \uADF8\uB7AC\uC5B4"
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -12483,7 +12485,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &699216704
 Transform:
   m_ObjectHideFlags: 0
@@ -16305,7 +16307,9 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1064910835}
-  m_Text: "\uC57C\uC639\uD558\uACE0 \uC6B0\uB294\uB370\n\uB108\uBB34 \uC0AC\uB791\uC2A4\uB7EC\uC6E0\uC5B4"
+  m_Text: "\uADF8\uB807\uAC8C \uB098\uB294 \uADFC\uCC98\uC5D0 \uADC0\uC2E0 \uAC19\uC740
+    \uAC8C  \uC788\uB294\uC9C0\uB294 \n\uC54C \uC218 \uC5C6\uC5C8\uC9C0\uB9CC \uB298
+    \uACC1\uC5D0 \uBA38\uBB3C\uB800\uC9C0"
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -17408,7 +17412,7 @@ TextMesh:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1236164082}
   m_Text: "\uADFC\uB370! \uC815\uB9D0 \uC2E0\uAE30\uD558\uAC8C \uC774\uB54C OO\uAC00
-    \n\uB0B4 \uBCA0\uAC1C \uC606\uC5D0\uC11C \uC790\uB294\uAC70 \uC788\uC9C0"
+    \uB0B4 \uBCA0\uAC8C \uC606\uC5D0\uC11C "
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -27805,7 +27809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d344922baa8e9f34c86e0f1284f68d2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene2: scene2
+  scene2: memory2-1
   respawnManager: {fileID: 1809456938}
 --- !u!114 &1486642816
 MonoBehaviour:
@@ -29564,6 +29568,7 @@ GameObject:
   - component: {fileID: 1620552399}
   - component: {fileID: 1620552398}
   - component: {fileID: 1620552397}
+  - component: {fileID: 1620552400}
   m_Layer: 0
   m_Name: item30
   m_TagString: Untagged
@@ -29677,6 +29682,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1620552400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620552395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b351ccc2ea88574b8067a95536f62e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnManager: {fileID: 1809456938}
 --- !u!1 &1628277801
 GameObject:
   m_ObjectHideFlags: 0
