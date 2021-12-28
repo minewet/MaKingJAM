@@ -4,7 +4,14 @@ using UnityEngine;
 
 public class ItemText1 : MonoBehaviour
 {
+    [SerializeField]
+    private AudioSource audioSource;
+
+    [SerializeField]
+    private AudioClip clip;
+
     private Transform text;
+    private bool play;
 
     // Start is called before the first frame update
     void Start()
@@ -24,12 +31,12 @@ public class ItemText1 : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         text.gameObject.SetActive(true);
+        play = true;
     }
 
     // 맵 크기에 따라 collider 크기와 거리 조정만 하면 됩니다.
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log(gameObject.transform.position.x - collision.transform.position.x);
         if (gameObject.transform.position.x - collision.transform.position.x > -1
             && gameObject.transform.position.x - collision.transform.position.x < 1)
         {
@@ -38,6 +45,14 @@ public class ItemText1 : MonoBehaviour
         else
         {
             text.GetComponent<TextMesh>().color = new Color32(0, 0, 0, 127);
+        }
+
+        audioSource.clip = clip;
+
+        if (play)
+        {
+            audioSource.Play();
+            play = false;
         }
     }
 
