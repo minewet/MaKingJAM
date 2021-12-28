@@ -270,6 +270,8 @@ MonoBehaviour:
   QuitButton: {fileID: 1596680586}
   SettingsButton: {fileID: 632208699}
   buttonClicked: {fileID: 218236282}
+  clip: {fileID: 8300000, guid: ad27e828e00934ac6ac9254f6166fb5c, type: 3}
+  audioSource: {fileID: 0}
   staffname: 
   catname: 
 --- !u!82 &218236282
