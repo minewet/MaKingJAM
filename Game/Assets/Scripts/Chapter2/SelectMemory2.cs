@@ -69,7 +69,9 @@ public class SelectMemory2 : MonoBehaviour
 
     IEnumerator Wait()
     {
+        Debug.Log("전환");
         yield return new WaitForSeconds(3f);
         SceneManager.LoadScene("Chapter3");
+        
     }
 }
