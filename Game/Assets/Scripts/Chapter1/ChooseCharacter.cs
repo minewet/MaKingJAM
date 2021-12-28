@@ -13,7 +13,6 @@ public class ChooseCharacter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        /*
         if (Management.staff == 0)
         {
             staff.SetActive(true);
@@ -24,7 +23,6 @@ public class ChooseCharacter : MonoBehaviour
             staff.SetActive(false);
             cat.SetActive(true);
         }
-        */
     }
 
     // Update is called once per frame
