@@ -14,9 +14,12 @@ public class RespawnManager1 : MonoBehaviour
     [SerializeField]
     private GameObject[] respawnSpots;
 
+    private Color color;
+
     private void Start()
     {
-        respawnMemory = "scene1";       
+        respawnMemory = "scene1";
+        color = player.GetComponent<SpriteRenderer>().color;
     }
 
     public void SetRespawnMemory(string name)
@@ -55,5 +58,22 @@ public class RespawnManager1 : MonoBehaviour
         {
             player.transform.position = respawnSpots[6].transform.position;
         }
+        StartCoroutine(Blink());
+    }
+
+    IEnumerator Blink()
+    {
+        player.GetComponent<SpriteRenderer>().color = new Color(color.r, color.g, color.b, 0.3f);
+        yield return new WaitForSeconds(0.3f);
+        player.GetComponent<SpriteRenderer>().color = new Color(color.r, color.g, color.b, 0.6f);
+        yield return new WaitForSeconds(0.3f);
+        player.GetComponent<SpriteRenderer>().color = new Color(color.r, color.g, color.b, 0.4f);
+        yield return new WaitForSeconds(0.3f);
+        player.GetComponent<SpriteRenderer>().color = new Color(color.r, color.g, color.b, 0.8f);
+        yield return new WaitForSeconds(0.3f);
+        player.GetComponent<SpriteRenderer>().color = new Color(color.r, color.g, color.b, 0.7f);
+        yield return new WaitForSeconds(0.3f);
+        player.GetComponent<SpriteRenderer>().color = new Color(color.r, color.g, color.b, 1.0f);
+        yield return new WaitForSeconds(0.3f);
     }
 }
