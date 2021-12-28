@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Ending : MonoBehaviour
 {
@@ -14,11 +15,17 @@ public class Ending : MonoBehaviour
     private string staffname;
     private string catname;
 
+    [SerializeField] GameObject ending;
+    [SerializeField] GameObject menu;
+    [SerializeField] AudioSource buttonClicked;
+
     // Start is called before the first frame update
     void Start()
     {
         staffname = PlayerPrefs.GetString("staffName");
         catname = PlayerPrefs.GetString("catName");
+        ending.SetActive(true);
+        menu.SetActive(false);
     }
 
     // Update is called once per frame
@@ -72,5 +79,37 @@ public class Ending : MonoBehaviour
         {
             f.text = catname + "은 별이 되었고, 오랜 시간 후에 " + staffname + "는 새로운 가족을 맞이했다. 하지만 언제나 마음 속에는 " + catname + "가 있었다.";
         }
+
+        next();
+    }
+
+    void next()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            ending.SetActive(false);
+            buttonClicked.Play();
+            menu.SetActive(true);
+        }
+    }
+
+    public void HomeButton()
+    {
+        buttonClicked.Play();
+        SceneManager.LoadScene("StartScene");
+        Management.A = 0;
+        Management.B = 0;
+        Management.C = 0;
+        Management.D = 0;
+        Management.E = 0;
+        Management.F = 0;
+        Management.cat = 0;
+        Management.staff = 0;
+    }
+
+    public void QuitButton()
+    {
+        buttonClicked.Play();
+        Application.Quit();
     }
 }

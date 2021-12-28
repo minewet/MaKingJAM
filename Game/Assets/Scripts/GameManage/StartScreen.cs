@@ -21,6 +21,7 @@ public class StartScreen : MonoBehaviour
     [SerializeField] InputField names_cat;
     [SerializeField] GameObject QuitButton;
     [SerializeField] GameObject SettingsButton;
+    [SerializeField] AudioSource buttonClicked;
     public string staffname = "";
     public string catname = "";
 
@@ -73,32 +74,39 @@ public class StartScreen : MonoBehaviour
 
     }
 
+
+
     public void PlayButtonDown()
     {
         s1 = true;
         s1_asset.SetActive(false);
+        buttonClicked.Play();
     }
 
     public void ClickHere()
     {
         SceneManager.LoadScene("Chapter1");
+        buttonClicked.Play();
     }
 
     public void QuitButtonDown()
     {
         Debug.Log("Quit Button Down");
         Application.Quit();
+        buttonClicked.Play();
     }
 
     public void SettingButtonDown()
     {
         Debug.Log("Settings Button Down");
         Setting_popup.SetActive(true);
+        buttonClicked.Play();
     }
 
     public void SettingBackButtonDown()
     {
         Setting_popup.SetActive(false);
+        buttonClicked.Play();
     }
 
 }
