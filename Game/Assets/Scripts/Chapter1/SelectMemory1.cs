@@ -8,6 +8,12 @@ public class SelectMemory1 : MonoBehaviour
     [SerializeField]
     private RespawnManager1 respawnManager;
 
+    [SerializeField]
+    private AudioSource audioSource;
+
+    [SerializeField]
+    private AudioClip clip;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -80,6 +86,9 @@ public class SelectMemory1 : MonoBehaviour
     IEnumerator Wait()
     {
         yield return new WaitForSeconds(3f);
+        audioSource.clip = clip;
+        audioSource.Play();
+        DontDestroyOnLoad(audioSource);
         SceneManager.LoadScene("Chapter2");
     }
 }
