@@ -7,14 +7,21 @@ using UnityEngine;
 public class RespawnManager3 : MonoBehaviour
 {
     private string respawnMemory;
+    private Color color;
 
     [SerializeField]
     private GameObject player;
+
 
     // 맨 처음 Scene 시작 지점을 transform으로 하는 empty object를 만들어주세요.
     // 0번 index에는 처음 시작 지점 object를 넣어주시고, 그 뒤 index에는 선택지를 순서대로 넣어주세요.
     [SerializeField]
     private GameObject[] respawnSpots;
+
+    void Start()
+    {
+        color = player.GetComponent<SpriteRenderer>().color;
+    }
 
     public void SetRespawnMemory(string name)
     {
@@ -52,6 +59,23 @@ public class RespawnManager3 : MonoBehaviour
         {
             player.transform.position = respawnSpots[6].transform.position;
         }
+        StartCoroutine(Blink());
+    }
+
+    IEnumerator Blink()
+    {
+        player.GetComponent<SpriteRenderer>().color = new Color(color.r, color.g, color.b, 0.3f);
+        yield return new WaitForSeconds(0.3f);
+        player.GetComponent<SpriteRenderer>().color = new Color(color.r, color.g, color.b, 0.6f);
+        yield return new WaitForSeconds(0.3f);
+        player.GetComponent<SpriteRenderer>().color = new Color(color.r, color.g, color.b, 0.4f);
+        yield return new WaitForSeconds(0.3f);
+        player.GetComponent<SpriteRenderer>().color = new Color(color.r, color.g, color.b, 0.8f);
+        yield return new WaitForSeconds(0.3f);
+        player.GetComponent<SpriteRenderer>().color = new Color(color.r, color.g, color.b, 0.7f);
+        yield return new WaitForSeconds(0.3f);
+        player.GetComponent<SpriteRenderer>().color = new Color(color.r, color.g, color.b, 1.0f);
+        yield return new WaitForSeconds(0.3f);
     }
 
 }
