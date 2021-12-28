@@ -11,7 +11,6 @@ public class ItemText1 : MonoBehaviour
     private AudioClip clip;
 
     private Transform text;
-    private bool play;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +30,11 @@ public class ItemText1 : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         text.gameObject.SetActive(true);
-        play = true;
+        if (!audioSource.isPlaying)
+        {
+            audioSource.clip = clip;
+            audioSource.Play();
+        }
     }
 
     // 맵 크기에 따라 collider 크기와 거리 조정만 하면 됩니다.
@@ -46,18 +49,11 @@ public class ItemText1 : MonoBehaviour
         {
             text.GetComponent<TextMesh>().color = new Color32(0, 0, 0, 127);
         }
-
-        audioSource.clip = clip;
-
-        if (play)
-        {
-            audioSource.Play();
-            play = false;
-        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         text.gameObject.SetActive(false);
+        audioSource.Stop();
     }
 }
