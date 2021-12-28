@@ -27,7 +27,7 @@ public class ItemText : MonoBehaviour
     // 맵 크기에 따라 collider 크기와 거리 조정만 하면 됩니다.
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log(gameObject.transform.position.x - collision.transform.position.x);
+        //Debug.Log(gameObject.transform.position.x - collision.transform.position.x);
         if (gameObject.transform.position.x - collision.transform.position.x > - 1
             && gameObject.transform.position.x - collision.transform.position.x < 1)
         {
